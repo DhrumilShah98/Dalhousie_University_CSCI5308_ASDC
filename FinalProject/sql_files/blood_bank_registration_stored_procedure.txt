@@ -1,0 +1,37 @@
+CREATE DEFINER=`CSCI5308_13_PRODUCTION_USER`@`%` PROCEDURE `blood_bank_registration`(
+	IN bb_name TEXT, 
+	IN bb_email VARCHAR(255), 
+	IN bb_password TEXT, 
+	IN bb_contact_number VARCHAR(10),
+	IN bb_address_first_line TEXT,
+	IN bb_address_street TEXT,
+	IN bb_address_city TEXT,
+	IN bb_address_province TEXT,
+	IN bb_address_zip_code VARCHAR(6),
+	IN bb_address_country VARCHAR(6),
+    IN bb_sq_1_id INT,
+    IN bb_sq_1_ans TEXT,
+    IN bb_sq_2_id INT,
+    IN bb_sq_2_ans TEXT)
+BEGIN	
+	DECLARE bb_id INT;
+    
+    INSERT INTO blood_bank(name, email, password, contact_number, address_first_line, address_street, address_city, address_province, address_zip_code, address_country, account_active)
+	VALUES (bb_name, bb_email, bb_password, bb_contact_number, bb_address_first_line, bb_address_street, bb_address_city, bb_address_province, bb_address_zip_code, bb_address_country, true);
+	
+    SELECT blood_bank_id INTO bb_id FROM blood_bank WHERE email=bb_email;
+    
+    INSERT INTO blood_bank_security_question_blood_bank(blood_bank_id, security_question_id, security_question_ans) VALUES 
+	(bb_id, bb_sq_1_id, bb_sq_1_ans),(bb_id, bb_sq_2_id, bb_sq_2_ans);
+    
+    INSERT INTO blood_stock (blood_bank_id, blood_group, quantity, threshold, unit_price)
+    VALUES
+    (bb_id, "A+", 0, 0, 0),
+    (bb_id, "A-", 0, 0, 0),
+    (bb_id, "B+", 0, 0, 0),
+    (bb_id, "B-", 0, 0, 0),
+    (bb_id, "AB+", 0, 0, 0),
+    (bb_id, "AB-", 0, 0, 0),
+    (bb_id, "O+", 0, 0, 0),
+    (bb_id, "O-", 0, 0, 0);
+END

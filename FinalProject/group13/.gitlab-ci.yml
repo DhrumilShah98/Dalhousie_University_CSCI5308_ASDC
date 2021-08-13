@@ -1,0 +1,84 @@
+variables:
+  # maven option to clean the generated target folder.
+  MAVEN_CLEAN_OPT: "clean"
+
+  # generated JAR file name by maven command "mvn package".
+  GENERATED_JAR_FILE_NAME: "csci5308_group13_blood_book-1.0.0.jar"
+
+  # target folder name where all build related artifacts are stored/downloaded.
+  TARGET_FOLDER_NAME: "target"
+
+  # Maven JDK Image
+  MAVEN_JDK_IMAGE: "3.8.1-jdk-8"
+
+  # Ruby Image
+  RUBY_IMAGE: "ruby:latest"
+
+stages:
+  # compiles this application.
+  - compile
+
+  # tests this application.
+  - test
+
+  # builds this application.
+  - build
+
+  # deploys this application as a production build. [Branch - master]
+  - deploy_prod
+
+compileStep:
+  stage: compile
+  image: $MAVEN_JDK_IMAGE
+  tags:
+    - ugrad
+  script:
+    - mvn $MAVEN_CLEAN_OPT compile
+
+testStep:
+  stage: test
+  image: $MAVEN_JDK_IMAGE
+  tags:
+    - ugrad
+  script:
+    - mvn test
+  artifacts:
+    paths:
+      - $TARGET_FOLDER_NAME/surefire-reports/Group13Test.txt
+    reports:
+      junit:
+        - $TARGET_FOLDER_NAME/surefire-reports/TEST-*.xml
+
+buildStep:
+  stage: build
+  image: $MAVEN_JDK_IMAGE
+  tags:
+    - ugrad
+  script:
+    - mvn package
+  artifacts:
+    when: on_success
+    paths:
+      - $TARGET_FOLDER_NAME/*.jar
+
+deployProdStep:
+  stage: deploy_prod
+  image: $RUBY_IMAGE
+  tags:
+    - ugrad
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$PROD_SSH_KEY" | tr -d '\r' | ssh-add -
+  script:
+    - echo "mysqlJDBCDriver=com.mysql.cj.jdbc.Driver" >> databaseConfig.properties
+    - echo "databaseType=prod" >> databaseConfig.properties
+    - echo "databaseURL=$PROD_DATABASE_URL" >> databaseConfig.properties
+    - echo "prodDatabase=$PROD_DATABASE" >> databaseConfig.properties
+    - echo "prodUsername=$PROD_DATABASE_USERNAME" >> databaseConfig.properties
+    - echo "prodPassword=$PROD_DATABASE_PASSWORD" >> databaseConfig.properties
+    - ssh -o StrictHostKeyChecking=no ${PROD_USER}@${PROD_HOST} "mkdir ${PROD_DIR}/${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHORT_SHA}"
+    - scp -r -o StrictHostKeyChecking=no $TARGET_FOLDER_NAME/$GENERATED_JAR_FILE_NAME "${PROD_USER}@${PROD_HOST}:${PROD_DIR}/${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHORT_SHA}/$GENERATED_JAR_FILE_NAME"
+    - scp -r -o StrictHostKeyChecking=no databaseConfig.properties "${PROD_USER}@${PROD_HOST}:${PROD_DIR}/${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHORT_SHA}/databaseConfig.properties"
+  only:
+    - master

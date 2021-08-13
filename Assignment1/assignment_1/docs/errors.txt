@@ -1,0 +1,125 @@
+Bug Report
+==========
+
+Note
+====
+I have mentioned the bugs I found in the documentation comment for a particular method. The syntax for this is as below:
+ - Bug: Bug found in the method.
+ - The problem caused due to that bug.
+ - Fix: Bug fix (solution).
+
+Bug report structure
+====================
+Error #error_number:
+ - Class name
+ - Method name
+ - Test method name
+ - Message produced by the test method
+ - Solution
+
+Bugs and changes
+================
+Error 1:
+ - Class:       Link
+ - Method:      getAdj(City c)
+ - Test Method: getAdjCity1()
+ - Message:     getAdjCity1() method returned wrong city
+ - Solution:    Changed getAdj(City c) to return correct value (i.e., city1)
+
+Error 2:
+ - Class:       Link
+ - Method:      getAdj(City c)
+ - Test Method: getAdjCityForNullValue()
+ - Message:     getAdjCityForNullValue() method returned city1 for null city value
+ - Solution:    Changed getAdj(City c) to return correct value (i.e., null)
+
+Error 3:
+ - Class:       Link
+ - Method:      getAdj(City c)
+ - Test Method: getAdjCityForRandomCity()
+ - Message:     getAdjCityForRandomCity() method returned city1 for a random city3
+ - Solution:    Changed getAdj(City c) to return correct value (i.e., null)
+
+Error 4:
+ - Class:       Link
+ - Method:      isUsed()
+ - Test Method: getInitialUsedValue()
+ - Message:     getInitialUsedValue() method returned true instead of false
+ - Solution:    Changed used to false in Link(City c1, City c2, int len)
+
+Error 5:
+ - Class:       Link
+ - Method:      toString()
+ - Test Method: printLinkC1LessC2()
+ - Message:     printLinkC1LessC2() with sorted city names returned wrong string
+ - Solution:    Changed return value in toString() to return correct string
+
+Error 6:
+ - Class:       Link
+ - Method:      compareTo(Link l)
+ - Test Method: linksSameCities()
+ - Message:     linksSameCities() returned wrong output
+ - Solution:    Logic implemented in compareTo(Link l) to return correct output when cities are same
+
+Error 7:
+ - Class:       Link
+ - Method:      compareTo(Link l)
+ - Test Method: link1City1SmallerLink2City1()
+ - Message:     link1City1SmallerLink2City1() returned wrong output
+ - Solution:    Logic implemented in compareTo(Link l) to return correct output when city1 of link1 is smaller than city1 of link2
+
+Error 8:
+ - Class:       Link
+ - Method:      compareTo(Link l)
+ - Test Method: link1City2SmallerLink2City2()
+ - Message:     link1City2SmallerLink2City2() returned wrong output
+ - Solution:    Logic implemented in compareTo(Link l) to return correct output when city1 of link1 is equal to city1 of link2 and city2 of link1 is smaller than city2 of link2
+
+Error 9:
+ - Class:       Link
+ - Method:      compareTo(Link l)
+ - Test Method: link1CitiesGreaterLink2Cities()
+ - Message:     link1CitiesGreaterLink2Cities() returned wrong output
+ - Solution:    Logic implemented in compareTo(Link l) to return correct output when link1 cities are greater than link2 cities
+
+Error 10:
+ - Class:       City
+ - Method:      addLink(Link link)
+ - Test Method: addNullLink()
+ - Message:     addNullLink() returned wrong output
+ - Solution:    Logic implemented in addLink(Link link) to avoid adding null links
+
+Error 11:
+ - Class:       City
+ - Method:      compareTo(City c2)
+ - Test Method: compareToCaseInsensitive()
+ - Message:     compareToCaseInsensitive() returned wrong output for difference case city names
+ - Solution:    Logic implemented in compareTo(City c2) to handle different case city names
+
+Error 12:
+ - Class:       City
+ - Method:      toString()
+ - Test Method: testToString()
+ - Message:     testToString() returned wrong string output
+ - Solution:    Logic implemented in toString() to return correct string output
+
+Error 13:
+ - Class:       City
+ - Method:      compare(City c1, City c2)
+ - Test Method: compareCity1Closer(), compareCity2Closer()
+ - Message:     Both the methods returned wrong calculation output
+ - Solution:    Logic implemented in compare(City c1, City c2) to return correct calculation output
+
+Error 14:
+ - Class:       City
+ - Method:      getLinksTo(City dest, Set<Link> routeLinks)
+ - Test Method: getLinksToRouteFound()
+ - Message:     getLinksToRouteFound() returned wrong output when a path was found
+ - Solution:    Logic implemented in getLinksTo(City dest, Set<Link> routeLinks) to return correct output when a path is found
+
+Error 15:
+ - Class:       CityComparator
+ - Method:      compare(City x, City y)
+ - Test Method: compare_xSmaller(), compare_xLarger()
+ - Message:     Both the methods returned wrong distance comparison output
+ - Solution:    Logic implemented in compare(City x, City y) to return correct distance comparison output
