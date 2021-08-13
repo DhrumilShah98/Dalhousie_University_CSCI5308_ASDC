@@ -14,19 +14,19 @@
 * [Assignment 2](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment2/ronnie)
 
 ### My Repository Link
-* [Assignment 2 - dashah](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment2/dashah)
+* [Assignment 2](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/tree/main/Assignment2)
 
 ### Source classes
-* [IndexableList.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment2/dashah/-/blob/master/src/main/java/IndexableList.java)
-* [OrderedIndexableList.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment2/dashah/-/blob/master/src/main/java/OrderedIndexableList.java)
-* [IndexedListPrinter.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment2/dashah/-/blob/master/src/main/java/IndexedListPrinter.java)
+* [IndexableList.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment2/assignment_2/src/main/java/IndexableList.java)
+* [OrderedIndexableList.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment2/assignment_2/src/main/java/OrderedIndexableList.java)
+* [IndexedListPrinter.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment2/assignment_2/src/main/java/IndexedListPrinter.java)
 
 ### Source interfaces
-* [IndexedList.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment2/dashah/-/blob/master/src/main/java/IndexedList.java)
-* [OrderedList.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment2/dashah/-/blob/master/src/main/java/OrderedList.java)
+* [IndexedList.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment2/assignment_2/src/main/java/IndexedList.java)
+* [OrderedList.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment2/assignment_2/src/main/java/OrderedList.java)
 
 ### Test classes
-* [Tests.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment2/dashah/-/blob/master/src/test/java/Tests.java)
+* [Tests.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment2/assignment_2/src/test/java/Tests.java)
 
 ### Documentation
-* [A2_CSCI5308_Dhrumil_Amish_Shah.pdf](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment2/dashah/-/blob/master/docs/A2_CSCI5308_Dhrumil_Amish_Shah.pdf)
+* [A2_CSCI5308_Dhrumil_Amish_Shah.pdf](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment2/assignment_2/docs/A2_CSCI5308_Dhrumil_Amish_Shah.pdf)
