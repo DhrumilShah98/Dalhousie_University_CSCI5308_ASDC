@@ -14,23 +14,23 @@
 * [Assignment 1](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment1/ronnie) - Code was cloned from this repository.
 
 ## My Repository Link
-* [Assignment 1 - dashah](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment1/dashah)
+* [Assignment 1](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/tree/main/Assignment1)
 
 ## Source classes
-* [City.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment1/dashah/-/blob/master/src/City.java)
-* [CityComparator.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment1/dashah/-/blob/master/src/CityComparator.java)
-* [Link.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment1/dashah/-/blob/master/src/Link.java)
+* [City.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment1/assignment_1/src/City.java)
+* [CityComparator.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment1/assignment_1/src/CityComparator.java)
+* [Link.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment1/assignment_1/src/Link.java)
 
 ## Test classes
-* [CityTest.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment1/dashah/-/blob/master/test/CityTest.java)
-* [CityComparatorTest.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment1/dashah/-/blob/master/test/CityTest.java)
-* [LinkTest.java](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment1/dashah/-/blob/master/test/CityTest.java)
+* [CityTest.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment1/assignment_1/test/CityTest.java)
+* [CityComparatorTest.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment1/assignment_1/test/CityComparatorTest.java)
+* [LinkTest.java](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment1/assignment_1/test/LinkTest.java)
 
 ## Errors reported
-* [errors.txt](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment1/dashah/-/blob/master/docs/errors.txt)
+* [errors.txt](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment1/assignment_1/docs/errors.txt)
 
 ## Documentation
-* [A1_Dhrumil_Amish_Shah.pdf](https://git.cs.dal.ca/courses/2021-summer/csci-5308/assignment1/dashah/-/blob/master/docs/A1_Dhrumil_Amish_shah.pdf) - This document briefly describes below setions:
+* [A1_Dhrumil_Amish_Shah.pdf](https://github.com/DhrumilShah98/Dalhousie_University_CSCI5308_ASDC/blob/main/Assignment1/assignment_1/docs/A1_Dhrumil_Amish_Shah.pdf) - This document briefly describes below setions:
     * Initial Steps Performed - Steps performed before writing test cases to set up the project.
     * Testing and Commit Approach - Steps performed for commits.
     * Insights - View points on the understanding of the given problem.
