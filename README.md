@@ -1,5 +1,5 @@
-# Dalhousie University | CSCI5308 | ASDC (Advanced Software Development Concepts)
-All assignments and the final project are completed in class CSCI5308 (Advanced Software Development Concepts) of MACS at Dalhousie University. CSCI5308 ASDC Dalhousie University.<br/>
+# Dalhousie University | CSCI 5308 | ASDC (Advanced Software Development Concepts)
+All assignments and the final project are completed in class CSCI 5308 (Advanced Software Development Concepts) of MACS at Dalhousie University. CSCI 5308 ASDC Dalhousie University.<br/>
 Final Letter Grade Received: **A+**
 
 ## Authors
